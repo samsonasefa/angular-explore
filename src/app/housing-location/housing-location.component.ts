@@ -24,7 +24,5 @@ import { HousingLocation } from '../housinglocation';
 export class HousingLocationComponent {
   @Input() housingLocation!: HousingLocation;
 
-  constructor() {
-    console.log('the comming housingLocation is ', this.housingLocation);
-  }
+  constructor() {}
 }
