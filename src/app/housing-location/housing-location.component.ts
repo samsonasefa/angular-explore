@@ -1,11 +1,12 @@
 import { Component, Input } from '@angular/core';
+import { RouterModule } from '@angular/router';
 
 import { HousingLocation } from '../housinglocation';
 
 @Component({
   selector: 'app-housing-location',
   standalone: true,
-  imports: [],
+  imports: [RouterModule],
   template: `
     <section class="listing">
       <img
@@ -17,6 +18,7 @@ import { HousingLocation } from '../housinglocation';
       <p class="listing-location">
         {{ housingLocation.city }}, {{ housingLocation.state }}
       </p>
+      <a [routerLink]="['/details', housingLocation.id]">Learn More</a>
     </section>
   `,
   styleUrl: './housing-location.component.css',
@@ -24,7 +26,5 @@ import { HousingLocation } from '../housinglocation';
 export class HousingLocationComponent {
   @Input() housingLocation!: HousingLocation;
 
-  constructor() {
-    console.log('the comming housingLocation is ', this.housingLocation);
-  }
+  constructor() {}
 }
