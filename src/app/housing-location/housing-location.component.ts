@@ -8,7 +8,12 @@ import { HousingLocation } from '../housinglocation';
   standalone: true,
   imports: [RouterModule],
   template: `
-    <section class="listing">
+    <section
+      class="listing"
+      [routerLink]="[
+        { outlets: { secondRouter: ['detail_page', housingLocation.id] } }
+      ]"
+    >
       <img
         class="listing-photo"
         [src]="housingLocation.photo"
