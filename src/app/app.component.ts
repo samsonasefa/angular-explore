@@ -21,6 +21,7 @@ import { HomeComponent } from './home/home.component';
     </a>
     <section class="content">
       <router-outlet></router-outlet>
+      <router-outlet name="secondRouter"></router-outlet>
     </section>
   </main>`,
   styleUrl: './app.component.css',

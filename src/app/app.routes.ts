@@ -19,5 +19,6 @@ export const routes: Routes = [
     path: 'detail_page/:id',
     component: DetailPageComponent,
     title: 'Detail page',
+    outlet: 'secondRouter',
   },
 ];

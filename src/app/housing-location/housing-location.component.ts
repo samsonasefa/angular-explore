@@ -10,7 +10,9 @@ import { HousingLocation } from '../housinglocation';
   template: `
     <section
       class="listing"
-      [routerLink]="['/detail_page', housingLocation.id]"
+      [routerLink]="[
+        { outlets: { secondRouter: ['detail_page', housingLocation.id] } }
+      ]"
     >
       <img
         class="listing-photo"
